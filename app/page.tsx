@@ -1,65 +1,87 @@
-import Image from "next/image";
+"use client";
+
+import { useState } from 'react';
+import Image from 'next/image';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Story from './components/Story';
+import Transformations from './components/Transformations';
+import Services from './components/Services';
+import Expectations from './components/Expectations';
+import Contact from './components/Contact';
+
+const content = {
+  heroTitle: "Design for the Life You Love",
+  heroSubtitle: "We don't just refresh rooms; we transform necessities into destinations.",
+  heroCtaBooking: "Book Your Consultation",
+  storyTitle: "The Heart Behind the Design",
+  storyCopy: "Amy translates her unique journey of purpose into design that prioritizes elegance and true connection to your home, serving the classic residences of our community.",
+  storyQuote: "\"Stop just living with your space. Fall in love with it.\"",
+  transTitle: "The Power of Transformation",
+  transCopy: "Discover the potential in your forgotten or underused spaces. Tap the image to see the change.",
+  labelAfter: "TAP TO SEE BEFORE",
+  labelBefore: "TAP TO SEE AFTER",
+  story1Title: "Story #1: From Ignored to Inviting",
+  story2Title: "Story #2: From Cluttered to Calm",
+  servicesTitle: "Design Services",
+  expectationsTitle: "What to Expect",
+  expectationsStep1: "1. Book Your Consultation",
+  expectationsStep2: "2. We'll Discuss Your Vision & Space",
+  expectationsStep3: "3. Receive Customized Design Recommendations",
+  expectationsStep4: "4. Implement Changes Together",
+  expectationsStep5: "5. Love Your Transformed Space",
+  service1Title: "Service 1",
+  service1Copy: "New service details coming soon",
+  service2Title: "Service 2",
+  service2Copy: "New service details coming soon",
+  contactTitle: "Begin Your Transformation",
+  contactCopy: "Ready to fall in love with your space? Schedule a complimentary initial consultation.",
+  contactName: "Your Name",
+  contactEmail: "Your Email",
+  contactPhone: "Phone Number",
+  contactMessage: "Tell us about your project...",
+  contactSubmit: "Request Consultation",
+  contactSending: "Sending...",
+  contactSuccess: "Thank You! Your request has been sent successfully.",
+  navStory: "The Story",
+  navTransformations: "Transformations",
+  navServices: "Services",
+  navContact: "Contact",
+  footer: "© 2026 Amy Jackson Design."
+};
 
 export default function Home() {
+  const [showBefore, setShowBefore] = useState(false);
+
+  const toggleImage = () => {
+    setShowBefore(!showBefore);
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className="min-h-screen">
+      <Header t={content} />
+      
+      <main className="pt-36 md:pt-20">
+        <Hero t={content} />
+        
+        <Story t={content} />
+        
+        <Transformations 
+          t={content}
+          showBefore={showBefore}
+          toggleImage={toggleImage}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        
+        <Services t={content} />
+        
+        <Expectations t={content} />
+        
+        <Contact t={content} />
       </main>
+      
+      <div className="fixed bottom-4 left-4 text-xs text-gray-400 opacity-50 z-10">
+        v1.0
+      </div>
     </div>
   );
 }
