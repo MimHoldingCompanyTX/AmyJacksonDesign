@@ -6,40 +6,49 @@ interface HeaderProps {
 
 export default function Header({ t }: HeaderProps) {
   return (
-    <header className="fixed top-0 w-full z-50 px-4 py-3 md:px-10 md:py-5 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0"
+    <header className="fixed top-0 w-full z-50 px-8 py-5 md:px-12 md:py-6 flex justify-between items-center"
       style={{
-        background: 'rgba(255, 255, 255, 0.85)',
+        background: 'rgba(245, 241, 235, 0.95)',
         backdropFilter: 'blur(10px)',
         WebkitBackdropFilter: 'blur(10px)',
-        borderBottom: '1px solid rgba(0,0,0,0.05)'
+        borderBottom: '1px solid rgba(184, 134, 11, 0.2)'
       }}
     >
-      <div className="logo font-serif text-lg md:text-xl font-bold tracking-widest text-primary text-left">
-        Amy Jackson Design
+      {/* Logo section with AJ monogram */}
+      <div className="flex items-center gap-4">
+        <div className="relative w-10 h-10 md:w-12 md:h-12 border border-brass flex items-center justify-center">
+          <div className="text-navy font-serif font-bold text-xl md:text-2xl tracking-tight">AJ</div>
+          <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-brass"></div>
+        </div>
+        <div className="flex flex-col">
+          <div className="text-navy font-serif font-bold text-lg md:text-xl tracking-widest">AMY JACKSON</div>
+          <div className="text-xs md:text-sm text-navy opacity-70 font-sans font-light tracking-widest flex items-center gap-2">
+            <span className="h-px w-4 bg-brass"></span>
+            DESIGN
+            <span className="h-px w-4 bg-brass"></span>
+          </div>
+        </div>
       </div>
-      <div className="nav-controls flex flex-col md:flex-row items-center gap-3 md:gap-8 w-full md:w-auto">
-        <ul className="flex list-none gap-2 md:gap-6 m-0 p-0 justify-center flex-wrap">
-          <li>
-            <a href="#story" className="no-underline text-primary font-lato text-xs md:text-sm uppercase tracking-widest md:tracking-widest font-normal relative pb-1 hover:text-primary transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-px after:bottom-0 after:left-0 after:bg-accent after:transition-width after:duration-300 hover:after:w-full whitespace-nowrap">
-              {t.navStory}
-            </a>
-          </li>
-          <li>
-            <a href="#transformations" className="no-underline text-primary font-lato text-xs md:text-sm uppercase tracking-widest md:tracking-widest font-normal relative pb-1 hover:text-primary transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-px after:bottom-0 after:left-0 after:bg-accent after:transition-width after:duration-300 hover:after:w-full whitespace-nowrap">
-              {t.navTransformations}
-            </a>
-          </li>
-          <li>
-            <a href="#services" className="no-underline text-primary font-lato text-xs md:text-sm uppercase tracking-widest md:tracking-widest font-normal relative pb-1 hover:text-primary transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-px after:bottom-0 after:left-0 after:bg-accent after:transition-width after:duration-300 hover:after:w-full whitespace-nowrap">
-              {t.navServices}
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="no-underline text-primary font-lato text-xs md:text-sm uppercase tracking-widest md:tracking-widest font-normal relative pb-1 hover:text-primary transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-px after:bottom-0 after:left-0 after:bg-accent after:transition-width after:duration-300 hover:after:w-full whitespace-nowrap">
-              {t.navContact}
-            </a>
-          </li>
-        </ul>
+      
+      {/* Navigation */}
+      <nav className="hidden md:flex items-center gap-10">
+        <a href="#about" className="nav-link">ABOUT</a>
+        <a href="#services" className="nav-link">SERVICES</a>
+        <a href="#portfolio" className="nav-link">PORTFOLIO</a>
+        <a href="#process" className="nav-link">PROCESS</a>
+        <a href="#contact" className="nav-link">CONTACT</a>
+      </nav>
+      
+      {/* Mobile menu button */}
+      <button className="md:hidden flex flex-col gap-1.5">
+        <span className="w-6 h-0.5 bg-navy"></span>
+        <span className="w-6 h-0.5 bg-navy"></span>
+        <span className="w-6 h-0.5 bg-navy"></span>
+      </button>
+      
+      {/* Tagline (visible on desktop) */}
+      <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 text-xs text-navy opacity-60 font-sans font-light tracking-widest">
+        MODERN. TIMELESS. REFINED.
       </div>
     </header>
   );

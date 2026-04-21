@@ -6,68 +6,126 @@ interface ServicesProps {
 
 export default function Services({ t }: ServicesProps) {
   return (
-    <section id="services" className="py-16 px-5 md:px-10 bg-light">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-12 text-primary text-center">
+    <div className="max-w-6xl mx-auto">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-serif font-light text-navy mb-4">
           {t.servicesTitle}
         </h2>
+        <div className="gold-accent mb-6"></div>
+        <p className="text-lg text-navy/70 max-w-2xl mx-auto">
+          Tailored design solutions to transform your space with elegance and purpose
+        </p>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Full-Service Interior Design */}
+        <div className="service-card group relative">
+          <div className="absolute -top-4 -left-4 w-8 h-8 border border-brass bg-ivory flex items-center justify-center text-brass font-serif font-bold text-lg">
+            01
+          </div>
+          <h3 className="text-xl font-serif font-light text-navy mb-4">
+            {t.service1Title}
+          </h3>
+          <div className="h-px w-12 bg-brass mb-6"></div>
+          <p className="text-navy/70 mb-6">
+            {t.service1Copy}
+          </p>
+          <ul className="space-y-3 mb-8">
+            <li className="flex items-start gap-2">
+              <span className="text-brass mt-1">✓</span>
+              <span className="text-navy/80">Initial consultation & space assessment</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-brass mt-1">✓</span>
+              <span className="text-navy/80">Custom furniture plans & layouts</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-brass mt-1">✓</span>
+              <span className="text-navy/80">Material selection & sourcing</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-brass mt-1">✓</span>
+              <span className="text-navy/80">Project management & installation</span>
+            </li>
+          </ul>
+          <a href="#contact" className="text-brass font-medium text-sm tracking-widest uppercase inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+            LEARN MORE
+            <span className="text-brass">→</span>
+          </a>
+        </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {/* Service 1 - Placeholder */}
-          <div className="service-card rounded-lg border-2 border-dashed border-gray-300 flex flex-col items-center justify-center p-10 min-h-[400px]">
-            <div className="text-center">
-              <div className="text-4xl text-gray-400 mb-4">+</div>
-              <h3 className="text-xl font-serif font-bold text-gray-500 mb-4">
-                Service 1
-              </h3>
-              <p className="text-gray-400 mb-6 text-center">
-                New service details coming soon
-              </p>
-              <div className="space-y-2 mb-6 opacity-50">
-                <div className="flex items-center justify-center">
-                  <span className="text-gray-300 mr-2">✓</span>
-                  <span className="text-gray-400">Feature 1</span>
-                </div>
-                <div className="flex items-center justify-center">
-                  <span className="text-gray-300 mr-2">✓</span>
-                  <span className="text-gray-400">Feature 2</span>
-                </div>
-                <div className="flex items-center justify-center">
-                  <span className="text-gray-300 mr-2">✓</span>
-                  <span className="text-gray-400">Feature 3</span>
-                </div>
-              </div>
-            </div>
+        {/* Design Consultation */}
+        <div className="service-card group relative">
+          <div className="absolute -top-4 -left-4 w-8 h-8 border border-brass bg-ivory flex items-center justify-center text-brass font-serif font-bold text-lg">
+            02
           </div>
-          
-          {/* Service 2 - Placeholder */}
-          <div className="service-card rounded-lg border-2 border-dashed border-gray-300 flex flex-col items-center justify-center p-10 min-h-[400px]">
-            <div className="text-center">
-              <div className="text-4xl text-gray-400 mb-4">+</div>
-              <h3 className="text-xl font-serif font-bold text-gray-500 mb-4">
-                Service 2
-              </h3>
-              <p className="text-gray-400 mb-6 text-center">
-                New service details coming soon
-              </p>
-              <div className="space-y-2 mb-6 opacity-50">
-                <div className="flex items-center justify-center">
-                  <span className="text-gray-300 mr-2">✓</span>
-                  <span className="text-gray-400">Feature 1</span>
-                </div>
-                <div className="flex items-center justify-center">
-                  <span className="text-gray-300 mr-2">✓</span>
-                  <span className="text-gray-400">Feature 2</span>
-                </div>
-                <div className="flex items-center justify-center">
-                  <span className="text-gray-300 mr-2">✓</span>
-                  <span className="text-gray-400">Feature 3</span>
-                </div>
-              </div>
-            </div>
+          <h3 className="text-xl font-serif font-light text-navy mb-4">
+            {t.service2Title}
+          </h3>
+          <div className="h-px w-12 bg-brass mb-6"></div>
+          <p className="text-navy/70 mb-6">
+            {t.service2Copy}
+          </p>
+          <ul className="space-y-3 mb-8">
+            <li className="flex items-start gap-2">
+              <span className="text-brass mt-1">✓</span>
+              <span className="text-navy/80">2-hour in-depth consultation</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-brass mt-1">✓</span>
+              <span className="text-navy/80">Color palette & material recommendations</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-brass mt-1">✓</span>
+              <span className="text-navy/80">Furniture layout optimization</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-brass mt-1">✓</span>
+              <span className="text-navy/80">Vendor & sourcing guidance</span>
+            </li>
+          </ul>
+          <a href="#contact" className="text-brass font-medium text-sm tracking-widest uppercase inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+            LEARN MORE
+            <span className="text-brass">→</span>
+          </a>
+        </div>
+        
+        {/* Room Refresh */}
+        <div className="service-card group relative">
+          <div className="absolute -top-4 -left-4 w-8 h-8 border border-brass bg-ivory flex items-center justify-center text-brass font-serif font-bold text-lg">
+            03
           </div>
+          <h3 className="text-xl font-serif font-light text-navy mb-4">
+            {t.service3Title}
+          </h3>
+          <div className="h-px w-12 bg-brass mb-6"></div>
+          <p className="text-navy/70 mb-6">
+            {t.service3Copy}
+          </p>
+          <ul className="space-y-3 mb-8">
+            <li className="flex items-start gap-2">
+              <span className="text-brass mt-1">✓</span>
+              <span className="text-navy/80">Single room transformation</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-brass mt-1">✓</span>
+              <span className="text-navy/80">Updated decor & accessories</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-brass mt-1">✓</span>
+              <span className="text-navy/80">Lighting & textile updates</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-brass mt-1">✓</span>
+              <span className="text-navy/80">Art & styling recommendations</span>
+            </li>
+          </ul>
+          <a href="#contact" className="text-brass font-medium text-sm tracking-widest uppercase inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+            LEARN MORE
+            <span className="text-brass">→</span>
+          </a>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

@@ -17,7 +17,7 @@ export default function Story({ t }: StoryProps) {
           <p className="text-lg text-dark leading-relaxed">
             {t.storyCopy}
           </p>
-          <blockquote className="text-xl md:text-2xl font-serif italic text-accent border-l-4 border-accent pl-6 my-8">
+          <blockquote className="text-xl md:text-2xl font-serif italic text-brass border-l-4 border-brass pl-6 my-8">
             {t.storyQuote}
           </blockquote>
         </div>

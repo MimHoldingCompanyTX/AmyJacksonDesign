@@ -1,39 +1,36 @@
 "use client";
 
 import { useState } from 'react';
-import Image from 'next/image';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Story from './components/Story';
-import Transformations from './components/Transformations';
+import About from './components/About';
 import Services from './components/Services';
-import Expectations from './components/Expectations';
+import Portfolio from './components/Portfolio';
+import Process from './components/Process';
 import Contact from './components/Contact';
 
 const content = {
-  heroTitle: "Design for the Life You Love",
-  heroSubtitle: "We don't just refresh rooms; we transform necessities into destinations.",
-  heroCtaBooking: "Book Your Consultation",
-  storyTitle: "The Heart Behind the Design",
-  storyCopy: "Amy translates her unique journey of purpose into design that prioritizes elegance and true connection to your home, serving the classic residences of our community.",
-  storyQuote: "\"Stop just living with your space. Fall in love with it.\"",
-  transTitle: "The Power of Transformation",
-  transCopy: "Discover the potential in your forgotten or underused spaces. Tap the image to see the change.",
-  labelAfter: "TAP TO SEE BEFORE",
-  labelBefore: "TAP TO SEE AFTER",
-  story1Title: "Story #1: From Ignored to Inviting",
-  story2Title: "Story #2: From Cluttered to Calm",
+  heroTitle: "Thoughtfully designed spaces for the way you live",
+  heroSubtitle: "MODERN. TIMELESS. REFINED.",
+  heroCtaBooking: "VIEW OUR WORK",
+  heroCtaContact: "GET IN TOUCH",
+  aboutTitle: "Meet Amy Jackson",
+  aboutCopy: "Amy translates her unique journey of purpose into design that prioritizes elegance and true connection to your home, serving the classic residences of our community.",
+  aboutQuote: "\"Stop just living with your space. Fall in love with it.\"",
   servicesTitle: "Design Services",
-  expectationsTitle: "What to Expect",
-  expectationsStep1: "1. Book Your Consultation",
-  expectationsStep2: "2. We'll Discuss Your Vision & Space",
-  expectationsStep3: "3. Receive Customized Design Recommendations",
-  expectationsStep4: "4. Implement Changes Together",
-  expectationsStep5: "5. Love Your Transformed Space",
-  service1Title: "Service 1",
-  service1Copy: "New service details coming soon",
-  service2Title: "Service 2",
-  service2Copy: "New service details coming soon",
+  service1Title: "Full-Service Interior Design",
+  service1Copy: "Comprehensive design from concept to completion, managing every detail of your project.",
+  service2Title: "Design Consultation",
+  service2Copy: "Expert advice and direction for your space with actionable recommendations and sourcing.",
+  service3Title: "Room Refresh",
+  service3Copy: "Transform a single room with updated furnishings, lighting, and decor while keeping existing layout.",
+  portfolioTitle: "Featured Projects",
+  processTitle: "Our Design Process",
+  processStep1: "1. Discovery Call",
+  processStep2: "2. Initial Consultation",
+  processStep3: "3. Design Development",
+  processStep4: "4. Installation",
+  processStep5: "5. Final Reveal",
   contactTitle: "Begin Your Transformation",
   contactCopy: "Ready to fall in love with your space? Schedule a complimentary initial consultation.",
   contactName: "Your Name",
@@ -43,45 +40,49 @@ const content = {
   contactSubmit: "Request Consultation",
   contactSending: "Sending...",
   contactSuccess: "Thank You! Your request has been sent successfully.",
-  navStory: "The Story",
-  navTransformations: "Transformations",
-  navServices: "Services",
-  navContact: "Contact",
-  footer: "© 2026 Amy Jackson Design."
+  footer: "© 2026 Amy Jackson Design. All rights reserved."
 };
 
 export default function Home() {
-  const [showBefore, setShowBefore] = useState(false);
-
-  const toggleImage = () => {
-    setShowBefore(!showBefore);
-  };
-
   return (
     <div className="min-h-screen">
       <Header t={content} />
       
-      <main className="pt-36 md:pt-20">
+      <main>
         <Hero t={content} />
         
-        <Story t={content} />
+        <section id="about" className="py-20 px-8 md:px-20 bg-ivory">
+          <About t={content} />
+        </section>
         
-        <Transformations 
-          t={content}
-          showBefore={showBefore}
-          toggleImage={toggleImage}
-        />
+        <section id="services" className="py-20 px-8 md:px-20 bg-greige">
+          <Services t={content} />
+        </section>
         
-        <Services t={content} />
+        <section id="portfolio" className="py-20 px-8 md:px-20 bg-ivory">
+          <Portfolio t={content} />
+        </section>
         
-        <Expectations t={content} />
+        <section id="process" className="py-20 px-8 md:px-20 bg-greige">
+          <Process t={content} />
+        </section>
         
-        <Contact t={content} />
+        <section id="contact" className="py-20 px-8 md:px-20 bg-ivory">
+          <Contact t={content} />
+        </section>
       </main>
       
-      <div className="fixed bottom-4 left-4 text-xs text-gray-400 opacity-50 z-10">
-        v1.0
-      </div>
+      <footer className="py-8 px-8 md:px-20 border-t border-gray-200 bg-greige">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex items-center gap-4 mb-4 md:mb-0">
+            <div className="relative w-8 h-8 border border-accent flex items-center justify-center">
+              <div className="text-navy font-serif font-bold text-lg">AJ</div>
+            </div>
+            <div className="text-navy font-serif font-bold text-sm tracking-widest">AMY JACKSON DESIGN</div>
+          </div>
+          <div className="text-xs text-navy opacity-60">{content.footer}</div>
+        </div>
+      </footer>
     </div>
   );
 }

@@ -41,161 +41,165 @@ export default function Contact({ t }: ContactProps) {
   };
 
   return (
-    <section id="contact" className="py-16 px-5 md:px-10 bg-light">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-primary text-center">
+    <div className="max-w-6xl mx-auto">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-serif font-light text-navy mb-4">
           {t.contactTitle}
         </h2>
-        <p className="text-lg text-dark text-center mb-12 max-w-2xl mx-auto">
+        <div className="gold-accent mb-6"></div>
+        <p className="text-lg text-navy/70 max-w-2xl mx-auto">
           {t.contactCopy}
         </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-          {/* Contact Form */}
-          <div className="bg-white p-8 rounded-lg shadow-sm">
-            {isSubmitted ? (
-              <div className="text-center py-10">
-                <div className="text-6xl mb-4">✓</div>
-                <h3 className="text-2xl font-serif font-bold text-primary mb-4">Success!</h3>
-                <p className="text-dark">{t.contactSuccess}</p>
+      </div>
+      
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        {/* Contact Form */}
+        <div className="bg-ivory p-10 border border-gray-100">
+          {isSubmitted ? (
+            <div className="text-center py-16">
+              <div className="text-6xl mb-6 text-brass">✓</div>
+              <h3 className="text-2xl font-serif font-light text-navy mb-4">Success!</h3>
+              <p className="text-navy/70">{t.contactSuccess}</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-8">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-navy mb-3 tracking-widest uppercase">
+                  {t.contactName}
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full p-4 border border-gray-200 bg-white text-navy focus:outline-none focus:border-brass transition-colors"
+                />
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-navy mb-3 tracking-widest uppercase">
+                  {t.contactEmail}
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full p-4 border border-gray-200 bg-white text-navy focus:outline-none focus:border-brass transition-colors"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-navy mb-3 tracking-widest uppercase">
+                  {t.contactPhone}
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full p-4 border border-gray-200 bg-white text-navy focus:outline-none focus:border-brass transition-colors"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-navy mb-3 tracking-widest uppercase">
+                  {t.contactMessage}
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows={5}
+                  required
+                  className="w-full p-4 border border-gray-200 bg-white text-navy focus:outline-none focus:border-brass transition-colors resize-none"
+                />
+              </div>
+              
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="cta-button w-full py-5 text-sm tracking-widest uppercase"
+              >
+                {isSubmitting ? t.contactSending : t.contactSubmit}
+              </button>
+            </form>
+          )}
+        </div>
+        
+        {/* Contact Information */}
+        <div className="space-y-8">
+          <div className="bg-ivory p-10 border border-gray-100">
+            <h3 className="text-2xl font-serif font-light text-navy mb-8">
+              Get In Touch
+            </h3>
+            <div className="space-y-8">
+              <div className="flex items-start gap-6">
+                <div className="w-12 h-12 border border-brass flex items-center justify-center text-brass text-xl">
+                  ✉️
+                </div>
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-dark mb-2">
-                    {t.contactName}
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="contact-input"
-                  />
+                  <p className="text-sm text-navy/60 tracking-widest uppercase mb-2">Email</p>
+                  <p className="text-lg text-navy font-medium">amy@amyjacksondesign.com</p>
                 </div>
-                
+              </div>
+              
+              <div className="flex items-start gap-6">
+                <div className="w-12 h-12 border border-brass flex items-center justify-center text-brass text-xl">
+                  📞
+                </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-dark mb-2">
-                    {t.contactEmail}
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="contact-input"
-                  />
+                  <p className="text-sm text-navy/60 tracking-widest uppercase mb-2">Phone</p>
+                  <p className="text-lg text-navy font-medium">(214) 555-0123</p>
                 </div>
-                
+              </div>
+              
+              <div className="flex items-start gap-6">
+                <div className="w-12 h-12 border border-brass flex items-center justify-center text-brass text-xl">
+                  📍
+                </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-dark mb-2">
-                    {t.contactPhone}
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="contact-input"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-dark mb-2">
-                    {t.contactMessage}
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={4}
-                    required
-                    className="contact-input"
-                  />
-                </div>
-                
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="cta-button w-full py-4 text-lg"
-                >
-                  {isSubmitting ? t.contactSending : t.contactSubmit}
-                </button>
-              </form>
-            )}
-          </div>
-          
-          {/* Contact Info */}
-          <div className="space-y-8">
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <h3 className="text-2xl font-serif font-bold text-primary mb-6">
-                Contact Information
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-accent">✉️</span>
-                  </div>
-                  <div>
-                    <p className="text-sm text-dark opacity-75">Email</p>
-                    <p className="text-lg text-primary">amy@amyjacksondesign.com</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-accent">📞</span>
-                  </div>
-                  <div>
-                    <p className="text-sm text-dark opacity-75">Phone</p>
-                    <p className="text-lg text-primary">(214) 555-0123</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-accent">📍</span>
-                  </div>
-                  <div>
-                    <p className="text-sm text-dark opacity-75">Service Area</p>
-                    <p className="text-lg text-primary">Preston Hollow • University Park • Uptown Dallas</p>
-                  </div>
+                  <p className="text-sm text-navy/60 tracking-widest uppercase mb-2">Service Area</p>
+                  <p className="text-lg text-navy font-medium">Preston Hollow • University Park • Uptown Dallas</p>
                 </div>
               </div>
             </div>
-            
-            <div className="bg-primary text-white p-8 rounded-lg">
-              <h4 className="text-xl font-serif font-bold mb-4">Office Hours</h4>
-              <ul className="space-y-2">
-                <li className="flex justify-between">
-                  <span>Monday - Friday</span>
-                  <span>9:00 AM - 6:00 PM</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Saturday</span>
-                  <span>10:00 AM - 4:00 PM</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>Sunday</span>
-                  <span>By appointment only</span>
-                </li>
-              </ul>
+          </div>
+          
+          <div className="bg-navy text-white p-10">
+            <h4 className="text-xl font-serif font-light mb-6">Office Hours</h4>
+            <ul className="space-y-4">
+              <li className="flex justify-between items-center pb-4 border-b border-white/10">
+                <span className="font-sans font-light">Monday - Friday</span>
+                <span className="font-sans font-medium">9:00 AM - 6:00 PM</span>
+              </li>
+              <li className="flex justify-between items-center pb-4 border-b border-white/10">
+                <span className="font-sans font-light">Saturday</span>
+                <span className="font-sans font-medium">10:00 AM - 4:00 PM</span>
+              </li>
+              <li className="flex justify-between items-center">
+                <span className="font-sans font-light">Sunday</span>
+                <span className="font-sans font-medium">By appointment only</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="text-center p-8 border border-gray-100">
+            <p className="text-sm text-navy/60 tracking-widest uppercase mb-4">FOLLOW THE JOURNEY</p>
+            <div className="flex justify-center gap-6">
+              <a href="#" className="text-navy hover:text-brass transition-colors">Instagram</a>
+              <a href="#" className="text-navy hover:text-brass transition-colors">Pinterest</a>
+              <a href="#" className="text-navy hover:text-brass transition-colors">Houzz</a>
             </div>
           </div>
         </div>
-        
-        <footer className="mt-16 pt-8 border-t border-gray-200 text-center">
-          <p className="text-dark">
-            {t.footer}
-          </p>
-        </footer>
       </div>
-    </section>
+    </div>
   );
 }
