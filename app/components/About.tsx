@@ -9,7 +9,7 @@ export default function About({ t }: AboutProps) {
     <div className="max-w-6xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-3xl md:text-4xl font-serif font-light text-navy mb-6">
+          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-navy mb-6">
             {t.aboutTitle}
           </h2>
           <div className="gold-accent mb-8"></div>
@@ -17,7 +17,7 @@ export default function About({ t }: AboutProps) {
             {t.aboutCopy}
           </p>
           <blockquote className="border-l-4 border-brass pl-6 py-2 mb-8">
-            <p className="text-xl font-serif font-light italic text-navy">
+            <p className="text-xl font-serif font-semibold italic text-navy">
               {t.aboutQuote}
             </p>
             <cite className="text-sm text-navy/60 mt-2 block">— Amy Jackson</cite>
@@ -36,7 +36,7 @@ export default function About({ t }: AboutProps) {
           </div>
           <div className="absolute -top-6 -left-6 w-24 h-24 border border-brass bg-ivory/80 flex items-center justify-center">
             <div className="text-center">
-              <div className="text-3xl text-brass font-serif font-bold">15+</div>
+              <div className="text-3xl text-brass font-serif font-semibold">15+</div>
               <div className="text-xs text-navy font-sans tracking-widest">YEARS</div>
             </div>
           </div>

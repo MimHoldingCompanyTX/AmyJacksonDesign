@@ -9,7 +9,9 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
+    qualities: [75, 90],
   },
+  // Remove problematic turbopack config that can cause infinite recompilation
 };
 
 export default nextConfig;

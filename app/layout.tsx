@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Cormorant, Montserrat } from "next/font/google";
+import { Cormorant_Garamond, Montserrat } from "next/font/google";
 import "./globals.css";
 
-const cormorant = Cormorant({ 
+const cormorantGaramond = Cormorant_Garamond({ 
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
-  variable: "--font-cormorant"
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-cormorant-garamond"
 });
 
 const montserrat = Montserrat({ 
@@ -25,12 +25,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${montserrat.variable}`}>
+    <html lang="en" className={`${cormorantGaramond.variable} ${montserrat.variable}`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
       </head>
       <body className="antialiased font-[var(--font-montserrat)]">
         {children}

@@ -26,12 +26,12 @@ export default function Hero({ t }: HeroProps) {
       <div className="relative z-10 px-8 md:px-20 py-32 max-w-6xl mx-auto text-left">
         <div className="mb-8">
           <div className="gold-accent mb-6"></div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-light text-white mb-6 leading-tight tracking-tight max-w-2xl">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-semibold text-white mb-6 leading-tight tracking-tight max-w-2xl">
             {t.heroTitle}
           </h1>
           <div className="flex items-center gap-4 mb-10">
             <span className="h-px w-12 bg-brass"></span>
-            <p className="text-lg md:text-xl text-white/90 font-sans font-light tracking-widest uppercase">
+            <p className="text-lg md:text-xl text-white/90 font-sans font-normal tracking-widest uppercase">
               {t.heroSubtitle}
             </p>
             <span className="h-px w-12 bg-brass"></span>

@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -76,9 +73,9 @@ export default function Home() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center gap-4 mb-4 md:mb-0">
             <div className="relative w-8 h-8 border border-accent flex items-center justify-center">
-              <div className="text-navy font-serif font-bold text-lg">AJ</div>
+              <div className="text-navy font-serif font-semibold text-lg">AJ</div>
             </div>
-            <div className="text-navy font-serif font-bold text-sm tracking-widest">AMY JACKSON DESIGN</div>
+            <div className="text-navy font-serif font-semibold text-sm tracking-widest">AMY JACKSON DESIGN</div>
           </div>
           <div className="text-xs text-navy opacity-60">{content.footer}</div>
         </div>

@@ -8,7 +8,7 @@ export default function Services({ t }: ServicesProps) {
   return (
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-serif font-light text-navy mb-4">
+        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-navy mb-4">
           {t.servicesTitle}
         </h2>
         <div className="gold-accent mb-6"></div>
@@ -20,10 +20,10 @@ export default function Services({ t }: ServicesProps) {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Full-Service Interior Design */}
         <div className="service-card group relative">
-          <div className="absolute -top-4 -left-4 w-8 h-8 border border-brass bg-ivory flex items-center justify-center text-brass font-serif font-bold text-lg">
+          <div className="absolute -top-4 -left-4 w-8 h-8 border border-brass bg-ivory flex items-center justify-center text-brass font-serif font-semibold text-lg">
             01
           </div>
-          <h3 className="text-xl font-serif font-light text-navy mb-4">
+          <h3 className="text-xl font-serif font-semibold text-navy mb-4">
             {t.service1Title}
           </h3>
           <div className="h-px w-12 bg-brass mb-6"></div>
@@ -56,10 +56,10 @@ export default function Services({ t }: ServicesProps) {
         
         {/* Design Consultation */}
         <div className="service-card group relative">
-          <div className="absolute -top-4 -left-4 w-8 h-8 border border-brass bg-ivory flex items-center justify-center text-brass font-serif font-bold text-lg">
+          <div className="absolute -top-4 -left-4 w-8 h-8 border border-brass bg-ivory flex items-center justify-center text-brass font-serif font-semibold text-lg">
             02
           </div>
-          <h3 className="text-xl font-serif font-light text-navy mb-4">
+          <h3 className="text-xl font-serif font-semibold text-navy mb-4">
             {t.service2Title}
           </h3>
           <div className="h-px w-12 bg-brass mb-6"></div>
@@ -92,10 +92,10 @@ export default function Services({ t }: ServicesProps) {
         
         {/* Room Refresh */}
         <div className="service-card group relative">
-          <div className="absolute -top-4 -left-4 w-8 h-8 border border-brass bg-ivory flex items-center justify-center text-brass font-serif font-bold text-lg">
+          <div className="absolute -top-4 -left-4 w-8 h-8 border border-brass bg-ivory flex items-center justify-center text-brass font-serif font-semibold text-lg">
             03
           </div>
-          <h3 className="text-xl font-serif font-light text-navy mb-4">
+          <h3 className="text-xl font-serif font-semibold text-navy mb-4">
             {t.service3Title}
           </h3>
           <div className="h-px w-12 bg-brass mb-6"></div>

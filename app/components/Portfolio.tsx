@@ -59,7 +59,7 @@ export default function Portfolio({ t }: PortfolioProps) {
   return (
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-serif font-light text-navy mb-4">
+        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-navy mb-4">
           {t.portfolioTitle}
         </h2>
         <div className="gold-accent mb-6"></div>
@@ -93,7 +93,7 @@ export default function Portfolio({ t }: PortfolioProps) {
             <div className="p-6">
               <div className="flex justify-between items-start mb-2">
                 <div>
-                  <h3 className="text-xl font-serif font-light text-navy mb-1">
+                  <h3 className="text-xl font-serif font-semibold text-navy mb-1">
                     {project.title}
                   </h3>
                   <div className="flex items-center gap-2 mb-4">

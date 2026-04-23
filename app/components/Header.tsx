@@ -14,20 +14,13 @@ export default function Header({ t }: HeaderProps) {
         borderBottom: '1px solid rgba(184, 134, 11, 0.2)'
       }}
     >
-      {/* Logo section with AJ monogram */}
-      <div className="flex items-center gap-4">
-        <div className="relative w-10 h-10 md:w-12 md:h-12 border border-brass flex items-center justify-center">
-          <div className="text-navy font-serif font-bold text-xl md:text-2xl tracking-tight">AJ</div>
-          <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-brass"></div>
-        </div>
-        <div className="flex flex-col">
-          <div className="text-navy font-serif font-bold text-lg md:text-xl tracking-widest">AMY JACKSON</div>
-          <div className="text-xs md:text-sm text-navy opacity-70 font-sans font-light tracking-widest flex items-center gap-2">
-            <span className="h-px w-4 bg-brass"></span>
-            DESIGN
-            <span className="h-px w-4 bg-brass"></span>
-          </div>
-        </div>
+      {/* Logo section with Amy Jackson Design logo */}
+      <div className="flex items-center">
+        <img 
+          src="/amy-jackson-logo.png" 
+          alt="Amy Jackson Design Logo" 
+          className="h-12 md:h-14 w-auto"
+        />
       </div>
       
       {/* Navigation */}

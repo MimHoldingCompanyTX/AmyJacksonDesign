@@ -43,7 +43,7 @@ export default function Contact({ t }: ContactProps) {
   return (
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-serif font-light text-navy mb-4">
+        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-navy mb-4">
           {t.contactTitle}
         </h2>
         <div className="gold-accent mb-6"></div>
@@ -58,7 +58,7 @@ export default function Contact({ t }: ContactProps) {
           {isSubmitted ? (
             <div className="text-center py-16">
               <div className="text-6xl mb-6 text-brass">✓</div>
-              <h3 className="text-2xl font-serif font-light text-navy mb-4">Success!</h3>
+              <h3 className="text-2xl font-serif font-semibold text-navy mb-4">Success!</h3>
               <p className="text-navy/70">{t.contactSuccess}</p>
             </div>
           ) : (
@@ -136,7 +136,7 @@ export default function Contact({ t }: ContactProps) {
         {/* Contact Information */}
         <div className="space-y-8">
           <div className="bg-ivory p-10 border border-gray-100">
-            <h3 className="text-2xl font-serif font-light text-navy mb-8">
+            <h3 className="text-2xl font-serif font-semibold text-navy mb-8">
               Get In Touch
             </h3>
             <div className="space-y-8">
@@ -173,7 +173,7 @@ export default function Contact({ t }: ContactProps) {
           </div>
           
           <div className="bg-navy text-white p-10">
-            <h4 className="text-xl font-serif font-light mb-6">Office Hours</h4>
+            <h4 className="text-xl font-serif font-semibold mb-6">Office Hours</h4>
             <ul className="space-y-4">
               <li className="flex justify-between items-center pb-4 border-b border-white/10">
                 <span className="font-sans font-light">Monday - Friday</span>

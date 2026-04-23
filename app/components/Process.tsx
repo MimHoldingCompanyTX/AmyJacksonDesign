@@ -41,7 +41,7 @@ export default function Process({ t }: ProcessProps) {
   return (
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-serif font-light text-navy mb-4">
+        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-navy mb-4">
           {t.processTitle}
         </h2>
         <div className="gold-accent mb-6"></div>
@@ -63,8 +63,8 @@ export default function Process({ t }: ProcessProps) {
                 <div className={`inline-block ${index % 2 === 0 ? 'text-right' : 'text-left'} max-w-md`}>
                   <div className="text-5xl mb-4 opacity-20">{step.icon}</div>
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="text-brass font-serif font-bold text-2xl">{step.number}</div>
-                    <h3 className="text-xl font-serif font-light text-navy">{step.title}</h3>
+                    <div className="text-brass font-serif font-semibold text-2xl">{step.number}</div>
+                    <h3 className="text-xl font-serif font-semibold text-navy">{step.title}</h3>
                   </div>
                   <p className="text-navy/70">
                     {step.description}
@@ -88,7 +88,7 @@ export default function Process({ t }: ProcessProps) {
         {steps.map((step) => (
           <div key={step.number} className="flex items-start gap-6">
             <div className="relative">
-              <div className="w-12 h-12 border-2 border-brass bg-ivory rounded-full flex items-center justify-center text-brass font-serif font-bold text-xl">
+              <div className="w-12 h-12 border-2 border-brass bg-ivory rounded-full flex items-center justify-center text-brass font-serif font-semibold text-xl">
                 {step.number}
               </div>
               {step.number !== "05" && (
@@ -97,7 +97,7 @@ export default function Process({ t }: ProcessProps) {
             </div>
             <div className="flex-1 pt-1">
               <div className="text-3xl mb-2 opacity-30">{step.icon}</div>
-              <h3 className="text-lg font-serif font-light text-navy mb-2">
+              <h3 className="text-lg font-serif font-semibold text-navy mb-2">
                 {step.title}
               </h3>
               <p className="text-navy/70 text-sm">
@@ -110,7 +110,7 @@ export default function Process({ t }: ProcessProps) {
       
       <div className="text-center mt-20">
         <div className="bg-gradient-to-r from-neutral to-greige border border-gray-100 p-10 max-w-3xl mx-auto">
-          <h3 className="text-2xl font-serif font-light text-navy mb-4">
+          <h3 className="text-2xl font-serif font-semibold text-navy mb-4">
             Ready to begin your design journey?
           </h3>
           <p className="text-navy/70 mb-8 max-w-2xl mx-auto">

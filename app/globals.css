@@ -1,71 +1,71 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  --color-navy: #1a365d;
-  --color-brass: #b8860b;
-  --color-greige: #f5f1eb;
-  --color-ivory: #fffff0;
-  --color-tan: #d2b48c;
+@layer base {
+  :root {
+    --color-navy: #243444;
+    --color-brass: #B08A5A;
+    --color-greige: #C9C1B9;
+    --color-ivory: #F4F1EC;
+    --color-charcoal: #2B2B2B;
+  }
   
-  --color-background: var(--color-greige);
-  --color-foreground: var(--color-navy);
-  --font-sans: 'Montserrat', sans-serif;
-  --font-serif: 'Cormorant', serif;
+  body {
+    font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+    color: var(--color-navy);
+    background-color: var(--color-greige);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-cormorant-garamond), 'Cormorant Garamond', serif;
+    font-weight: 600; /* SemiBold for headlines per brand cheat sheet */
+    letter-spacing: -0.5px;
+  }
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--color-navy);
-  background-color: var(--color-greige);
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3, h4 {
-  font-family: 'Cormorant', serif;
-  font-weight: 300;
-  letter-spacing: -0.5px;
-}
-
-/* Custom utility classes */
-.cta-button {
-  @apply bg-navy text-white px-8 py-3 rounded-none font-medium no-underline inline-block transition-all duration-300 border border-navy hover:bg-transparent hover:text-navy;
-}
-
-.cta-button-secondary {
-  @apply bg-transparent text-navy px-8 py-3 rounded-none font-medium no-underline inline-block transition-all duration-300 border border-navy hover:bg-navy hover:text-white;
-}
-
-.service-card {
-  @apply bg-ivory p-8 border border-gray-200 transition-all duration-300;
-}
-
-.service-card:hover {
-  @apply shadow-lg border-brass -translate-y-1;
-}
-
-.gold-accent {
-  @apply border-t-2 border-brass w-16 mx-auto my-4;
-}
-
-.nav-link {
-  @apply text-navy font-medium hover:text-brass transition-colors duration-300 relative;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 1px;
-  bottom: -2px;
-  left: 0;
-  background-color: var(--color-brass);
-  transition: width 0.3s;
-}
-
-.nav-link:hover::after {
-  width: 100%;
+@layer components {
+  .cta-button {
+    @apply bg-navy text-white px-8 py-3 rounded-none font-medium no-underline inline-block transition-all duration-300 border border-navy hover:bg-transparent hover:text-navy;
+  }
+  
+  .cta-button-secondary {
+    @apply bg-transparent text-navy px-8 py-3 rounded-none font-medium no-underline inline-block transition-all duration-300 border border-navy hover:bg-navy hover:text-white;
+  }
+  
+  .service-card {
+    @apply bg-ivory p-8 border border-gray-200 transition-all duration-300;
+  }
+  
+  .service-card:hover {
+    @apply shadow-lg border-brass -translate-y-1;
+  }
+  
+  .gold-accent {
+    @apply border-t-2 border-brass w-16 mx-auto my-4;
+  }
+  
+  .nav-link {
+    @apply text-navy font-medium hover:text-brass transition-colors duration-300 relative;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--color-brass);
+    transition: width 0.3s;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
 }
 
 /* Hero section styling */
@@ -74,7 +74,10 @@ h1, h2, h3, h4 {
   background-size: cover;
   background-position: center;
   min-height: 90vh;
-  @apply flex items-center justify-center text-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
 @media (min-width: 768px) {
