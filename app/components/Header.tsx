@@ -26,17 +26,17 @@ export default function Header({ t }: HeaderProps) {
       }}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-18 md:h-24">
+        <div className="flex justify-between items-center h-20 md:h-24">
           {/* Logo section */}
-          <div className="flex items-center flex-shrink-0 max-w-[78%] md:max-w-[50%] lg:max-w-[56%]">
-            <div className="relative h-16 w-52 sm:w-60 md:h-24 md:w-80 lg:h-28 lg:w-96 flex-shrink-0">
+          <div className="flex items-center flex-shrink-0 max-w-[82%] md:max-w-[50%] lg:max-w-[56%]">
+            <div className="relative h-[4.5rem] w-60 sm:h-20 sm:w-72 md:h-24 md:w-80 lg:h-28 lg:w-96 flex-shrink-0">
               <Image
                 src="/amy-landscape-logo.png"
                 alt="Amy Jackson Design Logo"
                 fill
                 className="object-contain object-left"
                 priority
-                sizes="(max-width: 640px) 208px, (max-width: 768px) 240px, (max-width: 1024px) 320px, 384px"
+                sizes="(max-width: 640px) 240px, (max-width: 768px) 288px, (max-width: 1024px) 320px, 384px"
               />
             </div>
           </div>
