@@ -13,26 +13,37 @@ export default function About({ t }: AboutProps) {
             {t.aboutTitle}
           </h2>
           <div className="gold-accent mb-8"></div>
-          <p className="text-lg text-navy/80 mb-8 leading-relaxed">
-            {t.aboutCopy}
-          </p>
-          <blockquote className="border-l-4 border-brass pl-6 py-2 mb-8">
-            <p className="text-xl font-serif font-semibold italic text-navy">
-              {t.aboutQuote}
-            </p>
-            <cite className="text-sm text-navy/60 mt-2 block">— Amy Jackson</cite>
-          </blockquote>
+          <div className="text-lg text-navy/80 mb-8 leading-relaxed">
+            {String(t.aboutCopy || "")
+              .split(/\n\s*\n/)
+              .filter(Boolean)
+              .map((para: string, idx: number) => (
+                <p key={idx} className={idx === 0 ? "mb-6" : idx === 1 ? "mb-6" : ""}>
+                  {para}
+                </p>
+              ))}
+          </div>
+
+          {t.aboutQuote ? (
+            <blockquote className="border-l-4 border-brass pl-6 py-2 mb-8">
+              <p className="text-xl font-serif font-semibold italic text-navy">
+                {t.aboutQuote}
+              </p>
+              <cite className="text-sm text-navy/60 mt-2 block">— Amy Jackson</cite>
+            </blockquote>
+          ) : null}
         </div>
         
         <div className="relative">
           <div className="aspect-square relative overflow-hidden">
-            {/* Placeholder for Amy's portrait - you should replace this with an actual image */}
-            <div className="absolute inset-0 bg-gradient-to-br from-neutral to-gray-100 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-6xl mb-4 text-navy/20">🎨</div>
-                <div className="text-navy/40 font-serif text-lg">Amy Jackson Portrait</div>
-              </div>
-            </div>
+            {/* Amy portrait */}
+            <img
+              src="/amy-jackson-profile.jpg"
+              alt="Amy Jackson Design portrait"
+              className="w-full h-full object-cover"
+              loading="eager"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-neutral/10 via-transparent to-neutral/10" />
           </div>
           <div className="absolute -top-6 -left-6 w-24 h-24 border border-brass bg-ivory/80 flex items-center justify-center">
             <div className="text-center">
