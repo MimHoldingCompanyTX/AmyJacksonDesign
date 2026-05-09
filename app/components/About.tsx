@@ -8,7 +8,7 @@ export default function About({ t }: AboutProps) {
   return (
     <div className="max-w-6xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div>
+        <div className="order-2 lg:order-1">
           <h2 className="text-3xl md:text-4xl font-serif font-semibold text-navy mb-6">
             {t.aboutTitle}
           </h2>
@@ -34,7 +34,7 @@ export default function About({ t }: AboutProps) {
           ) : null}
         </div>
         
-        <div className="relative">
+        <div className="relative order-1 lg:order-2">
           <div className="aspect-square relative overflow-hidden">
             {/* Amy portrait */}
             <img
