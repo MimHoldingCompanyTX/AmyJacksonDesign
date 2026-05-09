@@ -71,11 +71,14 @@ export default function Home() {
       
       <footer className="py-6 md:py-8 px-6 sm:px-8 md:px-20 border-t border-gray-200 bg-greige">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-0">
-            <div className="relative w-7 h-7 md:w-8 md:h-8 border border-brass/60 flex items-center justify-center">
-              <div className="text-navy font-serif font-semibold text-base md:text-lg">AJ</div>
+          <div className="flex items-center mb-4 md:mb-0">
+            <div className="relative h-10 w-36 md:h-12 md:w-44">
+              <img
+                src="/amy-landscape-logo.png"
+                alt="Amy Jackson Design Logo"
+                className="w-full h-full object-contain object-left"
+              />
             </div>
-            <div className="text-navy font-serif font-semibold text-xs md:text-sm tracking-widest">AMY JACKSON DESIGN</div>
           </div>
           <div className="text-xs text-navy opacity-60 text-center md:text-left">{content.footer}</div>
         </div>
