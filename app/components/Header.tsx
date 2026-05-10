@@ -31,7 +31,7 @@ export default function Header({ t }: HeaderProps) {
           <div className="flex items-center flex-1 min-w-0 pr-2 md:flex-none md:pr-0 md:max-w-[50%] lg:max-w-[56%]">
             <div className="relative h-12 w-56 max-w-[14rem] sm:h-16 sm:w-72 sm:max-w-[18rem] md:h-20 md:w-84 md:max-w-[21rem] lg:h-24 lg:w-96 lg:max-w-[24rem] flex-shrink-0">
               <Image
-                src="/amy-logo-cropped.png"
+                src="/amy-logo-spell.png"
                 alt="Amy Jackson Design Logo"
                 fill
                 className="object-contain object-left"
