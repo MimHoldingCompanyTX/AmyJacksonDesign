@@ -29,14 +29,14 @@ export default function Header({ t }: HeaderProps) {
         <div className="flex justify-between items-center h-24 md:h-24">
           {/* Logo section */}
           <div className="flex items-center flex-1 min-w-0 pr-2 md:flex-none md:pr-0 md:max-w-[50%] lg:max-w-[56%]">
-            <div className="relative h-28 w-48 max-w-[12rem] sm:h-32 sm:w-64 sm:max-w-[16rem] md:h-36 md:w-80 md:max-w-[20rem] lg:h-40 lg:w-96 lg:max-w-[24rem] flex-shrink-0">
+            <div className="relative h-36 w-72 max-w-[18rem] sm:h-40 sm:w-96 sm:max-w-[24rem] md:h-48 md:w-112 md:max-w-[28rem] lg:h-56 lg:w-128 lg:max-w-[32rem] flex-shrink-0">
               <Image
                 src="/amy-logo-cropped.png"
                 alt="Amy Jackson Design Logo"
                 fill
                 className="object-contain object-left"
                 priority
-                sizes="(max-width: 640px) 192px, (max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
+                sizes="(max-width: 640px) 288px, (max-width: 768px) 384px, (max-width: 1024px) 448px, 512px"
               />
             </div>
           </div>
