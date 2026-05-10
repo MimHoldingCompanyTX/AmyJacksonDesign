@@ -26,17 +26,17 @@ export default function Header({ t }: HeaderProps) {
       }}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24 md:h-24">
+        <div className="flex justify-between items-center h-20 md:h-20">
           {/* Logo section */}
           <div className="flex items-center flex-1 min-w-0 pr-2 md:flex-none md:pr-0 md:max-w-[50%] lg:max-w-[56%]">
-            <div className="relative h-27 w-54 max-w-[13.5rem] sm:h-30 sm:w-72 sm:max-w-[18rem] md:h-36 md:w-84 md:max-w-[21rem] lg:h-42 lg:w-96 lg:max-w-[24rem] flex-shrink-0">
+            <div className="relative h-12 w-56 max-w-[14rem] sm:h-16 sm:w-72 sm:max-w-[18rem] md:h-20 md:w-84 md:max-w-[21rem] lg:h-24 lg:w-96 lg:max-w-[24rem] flex-shrink-0">
               <Image
                 src="/amy-logo-cropped.png"
                 alt="Amy Jackson Design Logo"
                 fill
                 className="object-contain object-left"
                 priority
-                sizes="(max-width: 640px) 216px, (max-width: 768px) 288px, (max-width: 1024px) 336px, 384px"
+                sizes="(max-width: 640px) 224px, (max-width: 768px) 288px, (max-width: 1024px) 336px, 384px"
               />
             </div>
           </div>
@@ -91,7 +91,7 @@ export default function Header({ t }: HeaderProps) {
           className={`absolute inset-x-0 top-16 transform transition-all duration-300 ease-in-out ${
             isMenuOpen ? 'translate-y-0' : '-translate-y-4'
           }`}
-          style={{ top: '72px' }}
+          style={{ top: '56px' }}
         >
           <div className="px-4 py-6 bg-navy/95 backdrop-blur-lg border-t border-brass/40 shadow-xl">
           <nav className="space-y-2">
