@@ -74,7 +74,7 @@ export default function Home() {
           <div className="flex items-center mb-4 md:mb-0">
             <div className="relative h-10 w-36 md:h-12 md:w-44">
               <img
-                src="/amy-landscape-logo.png"
+                src="/amy-landscape-logo-large.png"
                 alt="Amy Jackson Design Logo"
                 className="w-full h-full object-contain object-left"
               />
