@@ -29,7 +29,7 @@ export default function Header({ t }: HeaderProps) {
         <div className="flex justify-between items-center h-24 md:h-24">
           {/* Logo section */}
           <div className="flex items-center flex-1 min-w-0 pr-2 md:flex-none md:pr-0 md:max-w-[50%] lg:max-w-[56%]">
-            <div className="relative h-20 w-full max-w-[16.5rem] sm:max-w-[18rem] md:h-24 md:w-80 lg:h-28 lg:w-96 flex-shrink-0">
+            <div className="relative h-24 w-24 max-w-[6rem] sm:h-28 sm:w-28 sm:max-w-[7rem] md:h-32 md:w-32 lg:h-36 lg:w-36 flex-shrink-0">
               <Image
                 src="/amy-landscape-logo-large.png"
                 alt="Amy Jackson Design Logo"
