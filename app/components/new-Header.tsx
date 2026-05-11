@@ -86,7 +86,7 @@ export default function Header({ t }: HeaderProps) {
 
       {/* Desktop Tagline */}
       <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 text-xs text-navy opacity-70 font-sans font-light tracking-widest">
-        MODERN. TIMELESS. REFINED.
+        MODERN. CLASSIC. REFINED.
       </div>
     </header>
   );

@@ -8,7 +8,7 @@ import Contact from './components/Contact';
 
 const content = {
   heroTitle: "Thoughtfully designed spaces for the way you live",
-  heroSubtitle: "MODERN. TIMELESS. REFINED.",
+  heroSubtitle: "MODERN. CLASSIC. REFINED.",
   heroCtaBooking: "VIEW OUR WORK",
   heroCtaContact: "GET IN TOUCH",
     aboutTitle: "Meet Amy",

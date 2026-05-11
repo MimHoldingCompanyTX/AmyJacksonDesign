@@ -15,8 +15,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Amy Jackson Design | Modern. Timeless. Refined.",
-  description: "Amy Jackson Design creates thoughtfully designed spaces for the way you live. Modern. Timeless. Refined.",
+  title: "Amy Jackson Design | Modern. Classic. Refined.",
+  description: "Amy Jackson Design creates thoughtfully designed spaces for the way you live. Modern. Classic. Refined.",
 };
 
 export default function RootLayout({
